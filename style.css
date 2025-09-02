@@ -1,0 +1,65 @@
+    #animated-span {
+      background: linear-gradient(
+        45deg,
+        #7e22ce,
+        #a855f7,
+        #d946ef,
+        #9333ea,
+        #7e22ce
+      );
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      animation: gradientMove 5s ease-in-out infinite;
+      font-weight: 800;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 100%;
+      }
+      50% {
+        background-position: 100% 0%;
+      }
+      100% {
+        background-position: 0% 100%;
+      }
+    }
+
+
+.btn-metal {
+  position: relative;
+  padding: 12px 28px;
+  font-size: 16px;
+  color: #ffffff;
+  background: #111111;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.btn-metal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 10px;
+  background: linear-gradient(120deg, #ccc, #fff, #aaa, #fff, #ccc);
+  background-size: 300% 300%;
+  animation: shine 4s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@keyframes shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+

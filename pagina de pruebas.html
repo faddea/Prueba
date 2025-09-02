@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Texto metálico brillante</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #animated-span {
+      background: linear-gradient(
+        45deg,
+        #7e22ce,
+        #a855f7,
+        #d946ef,
+        #9333ea,
+        #7e22ce
+      );
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      animation: gradientMove 5s ease-in-out infinite;
+      font-weight: 800;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 100%;
+      }
+      50% {
+        background-position: 100% 0%;
+      }
+      100% {
+        background-position: 0% 100%;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-900">
+  <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">
+    ¿Por qué elegir 
+    <span id="animated-span">Presency Web</span>?
+  </h2>
+</body>
+</html>

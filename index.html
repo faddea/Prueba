@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presency Web</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<style>
+    @keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+</style>
+
+</head>
+<body class="relative min-h-screen text-white">
+
+  <!-- Fondo degradado radial -->
+  <div class="absolute inset-0 z-0" style="background: radial-gradient(125% 125% at 50% 90%, #000000 40%, #2b092b 100%);"></div>
+
+  <!-- Contenido principal -->
+  <div class="relative z-10">
+
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-8 py-5">
+      <div class="text-2xl font-bold">Presency<span id="animated-span" class="text-purple-500">Web</span></div>
+      <ul class="hidden md:flex space-x-8 text-gray-300">
+        <li><a href="#" class="hover:text-purple-400 transition">Inicio</a></li>
+        <li><a href="#servicios" class="hover:text-purple-400 transition">Servicios</a></li>
+        <li><a href="#portafolio" class="hover:text-purple-400 transition">Portafolio</a></li>
+        <li><a href="#clientes" class="hover:text-purple-400 transition">Clientes</a></li>
+        <li><a href="#contacto" class="hover:text-purple-400 transition">Contacto</a></li>
+      </ul>
+      <div class="space-x-4">
+        <a href="#" class="text-gray-300 hover:text-white">Login</a>
+        <a href="#contacto" id="animated-span" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg transition">Cotizar</a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="px-8 md:px-16 py-16 flex flex-col items-center text-center opacity-0 translate-y-10 animate-fadeIn">
+      
+      <!-- Glow morado detrás del título -->
+      
+      <span class="px-3 py-1 bg-purple-900/30 rounded-full text-purple-400 text-sm font-medium">
+        Desarrollo Web & Apps
+      </span>
+      
+      <h1 class="text-4xl md:text-5xl font-extrabold mt-4 leading-tight max-w-3xl">
+        Creamos <span id="animated-span" class="text-purple-500">Páginas Web</span> y Sistemas que Impulsan tu Negocio
+      </h1>
+      
+      <p class="text-gray-400 mt-4 max-w-2xl">
+        Diseño y desarrollo frontend profesional para comercios, empresas y startups que buscan destacar en el mundo digital.
+      </p>
+      
+      <div class="mt-6 flex flex-col sm:flex-row gap-4">
+        <a href="#contacto" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 
+          hover:from-purple-700 hover:to-indigo-700 
+          rounded-lg font-medium text-white shadow-md transition">
+          Solicitar Cotización
+        </a>
+        <a href="#portafolio" class="btn-metal px-6 py-3 border border-gray-600 rounded-lg font-medium">
+          Ver Portafolio
+        </a>
+      </div>
+
+      <!-- Imagen/Mockup debajo del texto -->
+      <div class="mt-12 relative">
+        <div class="absolute -inset-4 bg-purple-500/20 rounded-3xl blur-2xl"></div>
+        <img src="https://img.freepik.com/free-vector/gradient-ui-ux-landing-page_52683-70954.jpg"
+             alt="Ejemplo de página web"
+             class="rounded-2xl shadow-lg border border-gray-800 max-w-full">
+      </div>
+    </section>
+
+  </div>
+
+<section id="beneficios" class="relative py-20 px-8 md:px-16 text-center">
+  <!-- Glow -->
+  <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-purple-500/10 blur-3xl rounded-full -z-10"></div>
+
+  <h2 class="text-3xl md:text-4xl font-bold mb-6">
+    ¿Por qué elegir 
+    <span id="animated-span" class="font-extrabold">Presency Web</span>?
+  </h2>
+  <p class="text-gray-400 max-w-2xl mx-auto mb-12">
+    No solo creamos sitios web, creamos experiencias digitales que impulsan tu negocio y generan confianza en tus clientes.
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-8 p-4 md:p-8">
+    <div class="bg-black p-6 rounded-lg shadow-lg shadow-violet-700/50 w-full max-w-sm mx-auto transform transition-transform duration-300 hover:-translate-y-4 hover:shadow-2xl btn-metal">
+      <svg class="w-10 h-10 text-purple-400 mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M3 3h18v18H3z" />
+      </svg>
+      <h3 class="text-white font-semibold text-xl mb-2">Diseño único</h3>
+      <p class="text-gray-400 text-sm">Cada web es adaptada a tu marca, con un estilo que destaque frente a tu competencia.</p>
+    </div>
+
+    <div class="bg-black p-6 rounded-lg shadow-lg shadow-violet-700/50 w-full max-w-sm mx-auto transform transition-transform duration-300 hover:-translate-y-4 hover:shadow-2xl btn-metal">
+      <svg class="w-10 h-10 text-purple-400 mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 8v8m-4-4h8" />
+      </svg>
+      <h3 class="text-white font-semibold text-xl mb-2">Más clientes</h3>
+      <p class="text-gray-400 text-sm">Un sitio profesional inspira confianza y aumenta la tasa de conversión.</p>
+    </div>
+
+    <div class="bg-black p-6 rounded-lg shadow-lg shadow-violet-700/50 w-full max-w-sm mx-auto transform transition-transform duration-300 hover:-translate-y-4 hover:shadow-2xl btn-metal">
+      <svg class="w-10 h-10 text-purple-400 mx-auto mb-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M4 4h16v16H4z" />
+      </svg>
+      <h3 class="text-white font-semibold text-xl mb-2">Tecnología confiable</h3>
+      <p class="text-gray-400 text-sm">Desarrollamos con frontend moderno y backend en Supabase para rendimiento y seguridad.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="portafolio" class="relative py-20 px-8 md:px-16 text-left">
+  <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
+    <!-- Título -->
+    <div class="md:w-1/2">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Tu web puede tener <span class="italic text-purple-600">estilo</span>!
+      </h2>
+      <p class="text-gray-400 max-w-lg">
+        Inspiraciones y diseños de referencia que muestran el nivel de calidad que podemos crear para ti.
+      </p>
+    </div>
+
+    <!-- Collage de imágenes -->
+    <div class="md:w-1/2 grid grid-cols-2 gap-4">
+      <div class="rounded-xl overflow-hidden border border-gray-800">
+        <img src="https://via.placeholder.com/300x200" class="w-full h-full object-cover" />
+      </div>
+      <div class="rounded-xl overflow-hidden border border-gray-800">
+        <img src="https://via.placeholder.com/300x200" class="w-full h-full object-cover" />
+      </div>
+      <div class="rounded-xl overflow-hidden border border-gray-800">
+        <img src="https://via.placeholder.com/300x200" class="w-full h-full object-cover" />
+      </div>
+      <div class="rounded-xl overflow-hidden border border-gray-800">
+        <img src="https://via.placeholder.com/300x200" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="proceso" class="relative py-20 px-8 md:px-16">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
+    Nuestro Proceso
+  </h2>
+  <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+    Tenemos un método claro para que tu proyecto avance rápido y sin complicaciones.
+  </p>
+
+  <div class="flex flex-col md:flex-row md:items-start md:justify-center gap-8 text-center md:text-left">
+    <div class="flex-1 bg-white/5 p-6 rounded-2xl border border-gray-800 hover:border-purple-500 transition">
+      <div class="text-purple-500 text-2xl font-bold mb-2">01</div>
+      <h3 class="text-xl font-semibold mb-2">Briefing</h3>
+      <p class="text-gray-400 text-sm">Analizamos tu negocio y definimos objetivos claros para tu web.</p>
+    </div>
+
+    <div class="flex-1 bg-white/5 p-6 rounded-2xl border border-gray-800 hover:border-purple-500 transition">
+      <div class="text-purple-500 text-2xl font-bold mb-2">02</div>
+      <h3 class="text-xl font-semibold mb-2">Diseño & Desarrollo</h3>
+      <p class="text-gray-400 text-sm">Creamos la interfaz y programamos tu web con las mejores prácticas.</p>
+    </div>
+
+    <div class="flex-1 bg-white/5 p-6 rounded-2xl border border-gray-800 hover:border-purple-500 transition">
+      <div class="text-purple-500 text-2xl font-bold mb-2">03</div>
+      <h3 class="text-xl font-semibold mb-2">Lanzamiento</h3>
+      <p class="text-gray-400 text-sm">Publicamos tu web optimizada y lista para generar ventas.</p>
+    </div>
+  </div>
+</section>
+
+<section id="cta" class="relative py-20 px-8 md:px-16 text-center overflow-hidden">
+  <!-- Fondo degradado -->
+  <div class="absolute inset-0 bg-gradient-to-br from-purple-800/40 via-purple-900/20 to-black"></div>
+  <div class="relative z-10 max-w-3xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      Tu próxima web <span id="animated-span" class="text-purple-400">puede estar lista</span> en pocos días
+    </h2>
+    <p class="text-gray-300 mb-8">
+      Cada día sin un sitio profesional es una oportunidad perdida.  
+      Empieza hoy y haz que tus clientes te encuentren, confíen y compren.
+    </p>
+    <a href="#" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 
+          hover:from-purple-700 hover:to-indigo-700 
+          rounded-lg font-medium text-white shadow-md transition">
+      Solicitar Cotización Ahora
+    </a>
+  </div>
+</section>
+
+<section id="faq" class="relative py-20 px-8 md:px-16">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
+    Preguntas Frecuentes
+  </h2>
+  <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+    Respondemos las dudas más comunes antes de que empieces tu proyecto.
+  </p>
+
+  <div class="max-w-3xl mx-auto space-y-4">
+    <!-- FAQ Item -->
+    <div class="bg-white/5 border border-gray-800 rounded-lg overflow-hidden">
+      <button class="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none toggle-faq">
+        <span class="font-medium">¿Cuánto tiempo tarda un proyecto?</span>
+        <span class="text-purple-400">+</span>
+      </button>
+      <div class="px-6 pb-4 text-gray-400 hidden">
+        Generalmente entre 1 y 3 semanas, dependiendo de la complejidad y tus revisiones.
+      </div>
+    </div>
+
+    <div class="bg-white/5 border border-gray-800 rounded-lg overflow-hidden">
+      <button class="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none toggle-faq">
+        <span class="font-medium">¿Puedo pedir cambios en el diseño?</span>
+        <span class="text-purple-400">+</span>
+      </button>
+      <div class="px-6 pb-4 text-gray-400 hidden">
+        Sí, incluimos rondas de revisión para que el resultado final sea exactamente lo que buscas.
+      </div>
+    </div>
+
+    <div class="bg-white/5 border border-gray-800 rounded-lg overflow-hidden">
+      <button class="w-full text-left px-6 py-4 flex justify-between items-center focus:outline-none toggle-faq">
+        <span class="font-medium">¿Qué necesito para empezar?</span>
+        <span class="text-purple-400">+</span>
+      </button>
+      <div class="px-6 pb-4 text-gray-400 hidden">
+        Solo necesitamos tu logo, colores y una idea clara de lo que quieres comunicar.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="relative py-20 px-8 md:px-16 text-center overflow-hidden">
+  <!-- Glow de fondo -->
+  <div class="absolute -top-16 -left-16 w-96 h-96 bg-purple-500/20 blur-3xl rounded-full -z-10"></div>
+
+  <h2 class="text-3xl md:text-4xl font-bold mb-6">
+    ¿Listo para <span id="an" class="text-purple-500">impulsar tu negocio?</span>
+  </h2>
+  <p class="text-gray-400 mb-12 max-w-2xl mx-auto">
+    Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas.
+  </p>
+
+  <form class="max-w-2xl mx-auto grid gap-4 md:grid-cols-2">
+    <input type="text" placeholder="Tu nombre" class="p-4 rounded-lg bg-white/5 border border-gray-800 text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition">
+    <input type="email" placeholder="Tu email" class="p-4 rounded-lg bg-white/5 border border-gray-800 text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition">
+    <input type="text" placeholder="Asunto" class="p-4 rounded-lg bg-white/5 border border-gray-800 text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition md:col-span-2">
+    <textarea placeholder="Tu mensaje" rows="4" class="p-4 rounded-lg bg-white/5 border border-gray-800 text-white placeholder-gray-400 focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition md:col-span-2"></textarea>
+    <button type="submit" class="md:col-span-2 px-6 py-3px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 
+          hover:from-purple-700 hover:to-indigo-700 
+          rounded-lg font-medium text-white shadow-md transition">
+      Enviar Mensaje
+    </button>
+  </form>
+</section>
+
+
+<footer class="bg-black border-t border-gray-800 py-12 px-8 md:px-16 relative z-20">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- Brand -->
+    <div>
+      <div class="text-2xl font-bold text-white mb-4">
+        Presency<span id="animated-span" class="text-purple-500">Web</span>
+      </div>
+      <p class="text-gray-400 text-sm">
+        Creamos páginas y sistemas web profesionales para negocios que quieren destacar.
+      </p>
+    </div>
+
+    <!-- Links -->
+    <div>
+      <h4 class="text-white font-semibold mb-4">Servicios</h4>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li><a href="#" class="hover:text-purple-400">Desarrollo Web</a></li>
+        <li><a href="#" class="hover:text-purple-400">Sistemas Web</a></li>
+        <li><a href="#" class="hover:text-purple-400">Apps Web</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-white font-semibold mb-4">Empresa</h4>
+      <ul class="space-y-2 text-gray-400 text-sm">
+        <li><a href="#" class="hover:text-purple-400">Sobre nosotros</a></li>
+        <li><a href="#" class="hover:text-purple-400">Portafolio</a></li>
+        <li><a href="#" class="hover:text-purple-400">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Contacto -->
+    <div>
+      <h4 class="text-white font-semibold mb-4">Contáctanos</h4>
+      <p class="text-gray-400 text-sm">presencyweb@gmail.com</p>
+      <p class="text-gray-400 text-sm">+54 11 2345 6789</p>
+    </div>
+  </div>
+
+  <div class="mt-12 border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+    © 2025 Presency Web. Todos los derechos reservados.
+  </div>
+</footer>
+
+
+<script>
+  document.querySelectorAll('.toggle-faq').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.nextElementSibling;
+      content.classList.toggle('hidden');
+      btn.querySelector('span:last-child').textContent = content.classList.contains('hidden') ? '+' : '–';
+    });
+  });
+</script>
+
+<script src="animations.js"></script>
+  
+</body>
+</html>
