@@ -5,23 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Presency Web</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/ico" href="images/wmremove-transformed.ico">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-
-<style>
-    @keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-</style>
-
 </head>
 <body class="relative min-h-screen text-white">
 
@@ -42,16 +28,14 @@
         <li><a href="#contacto" class="hover:text-purple-400 transition">Contacto</a></li>
       </ul>
       <div class="space-x-4">
-        <a href="#" class="text-gray-300 hover:text-white">Login</a>
         <a href="#contacto" id="animated-span" class="px-4 py-2 bg-purple-600 hover:bg-purple-700 rounded-lg transition">Cotizar</a>
       </div>
     </nav>
 
     <!-- Hero -->
-    <section class="px-8 md:px-16 py-16 flex flex-col items-center text-center opacity-0 translate-y-10 animate-fadeIn">
+    <section class="px-8 md:px-16 py-16 flex flex-col items-center text-center">
       
       <!-- Glow morado detrás del título -->
-      
       <span class="px-3 py-1 bg-purple-900/30 rounded-full text-purple-400 text-sm font-medium">
         Desarrollo Web & Apps
       </span>
@@ -65,7 +49,7 @@
       </p>
       
       <div class="mt-6 flex flex-col sm:flex-row gap-4">
-        <a href="#contacto" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 
+        <a href="#contacto" class="cta-button px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 
           hover:from-purple-700 hover:to-indigo-700 
           rounded-lg font-medium text-white shadow-md transition">
           Solicitar Cotización
@@ -78,7 +62,7 @@
       <!-- Imagen/Mockup debajo del texto -->
       <div class="mt-12 relative">
         <div class="absolute -inset-4 bg-purple-500/20 rounded-3xl blur-2xl"></div>
-        <img src="https://img.freepik.com/free-vector/gradient-ui-ux-landing-page_52683-70954.jpg"
+        <img src="images/descarga (10).jfif"
              alt="Ejemplo de página web"
              class="rounded-2xl shadow-lg border border-gray-800 max-w-full">
       </div>
@@ -126,35 +110,55 @@
 </section>
 
 
-<section id="portafolio" class="relative py-20 px-8 md:px-16 text-left">
-  <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
-    <!-- Título -->
-    <div class="md:w-1/2">
+<section id="portafolio" class="relative py-20 px-8 md:px-16 text-center">
+  <!-- Glow -->
+  <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-purple-500/10 blur-3xl rounded-full -z-10"></div>
+
+  <div class="container mx-auto">
+    <div class="flex flex-col items-center gap-4 mb-16">
       <h2 class="text-3xl md:text-4xl font-bold mb-4">
         Tu web puede tener <span class="italic text-purple-600">estilo</span>!
       </h2>
-      <p class="text-gray-400 max-w-lg">
-        Inspiraciones y diseños de referencia que muestran el nivel de calidad que podemos crear para ti.
+      <p class="text-gray-400 max-w-2xl">
+        Inspiraciones y diseños de referencia que muestran el nivel de calidad que podemos crear.
       </p>
     </div>
 
-    <!-- Collage de imágenes -->
-    <div class="md:w-1/2 grid grid-cols-2 gap-4">
-      <div class="rounded-xl overflow-hidden border border-gray-800">
-        <img src="https://via.placeholder.com/300x200" class="w-full h-full object-cover" />
+    <!-- Galería -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Item -->
+      <div class="group relative rounded-2xl overflow-hidden border border-gray-800 shadow-lg bg-black/40 hover:scale-[1.02] transition-transform duration-300">
+        <img src="images/Organic & Vegan Bakery Landing Page Design for a Healthy 2025.jfif" 
+             class="w-full h-64 object-cover" 
+             alt="Diseño de página web de panadería">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+          <span class="text-purple-400 font-medium">Diseño Panadería</span>
+        </div>
       </div>
-      <div class="rounded-xl overflow-hidden border border-gray-800">
-        <img src="https://via.placeholder.com/300x200" class="w-full h-full object-cover" />
+
+      <!-- Item -->
+      <div class="group relative rounded-2xl overflow-hidden border border-gray-800 shadow-lg bg-black/40 hover:scale-[1.02] transition-transform duration-300">
+        <img src="images/Kawsar_.jfif" 
+             class="w-full h-64 object-cover" 
+             alt="Diseño de página web con estilo minimalista">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+          <span class="text-purple-400 font-medium">Diseño Minimalista</span>
+        </div>
       </div>
-      <div class="rounded-xl overflow-hidden border border-gray-800">
-        <img src="https://via.placeholder.com/300x200" class="w-full h-full object-cover" />
-      </div>
-      <div class="rounded-xl overflow-hidden border border-gray-800">
-        <img src="https://via.placeholder.com/300x200" class="w-full h-full object-cover" />
+
+      <!-- Item -->
+      <div class="group relative rounded-2xl overflow-hidden border border-gray-800 shadow-lg bg-black/40 hover:scale-[1.02] transition-transform duration-300">
+        <img src="images/Modern ready-made Website landing page template for Framer.jfif" 
+             class="w-full h-64 object-cover" 
+             alt="Diseño de página de aterrizaje moderna">
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition">
+          <span class="text-purple-400 font-medium">Landing Moderna</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
@@ -166,20 +170,21 @@
     Tenemos un método claro para que tu proyecto avance rápido y sin complicaciones.
   </p>
 
+
   <div class="flex flex-col md:flex-row md:items-start md:justify-center gap-8 text-center md:text-left">
-    <div class="flex-1 bg-white/5 p-6 rounded-2xl border border-gray-800 hover:border-purple-500 transition">
+    <div class="bg-black p-6 rounded-lg shadow-lg shadow-violet-700/50 w-full max-w-sm mx-auto transform transition-transform duration-300 hover:-translate-y-4 hover:shadow-2xl btn-metal">
       <div class="text-purple-500 text-2xl font-bold mb-2">01</div>
       <h3 class="text-xl font-semibold mb-2">Briefing</h3>
       <p class="text-gray-400 text-sm">Analizamos tu negocio y definimos objetivos claros para tu web.</p>
     </div>
 
-    <div class="flex-1 bg-white/5 p-6 rounded-2xl border border-gray-800 hover:border-purple-500 transition">
+    <div class="bg-black p-6 rounded-lg shadow-lg shadow-violet-700/50 w-full max-w-sm mx-auto transform transition-transform duration-300 hover:-translate-y-4 hover:shadow-2xl btn-metal">
       <div class="text-purple-500 text-2xl font-bold mb-2">02</div>
       <h3 class="text-xl font-semibold mb-2">Diseño & Desarrollo</h3>
       <p class="text-gray-400 text-sm">Creamos la interfaz y programamos tu web con las mejores prácticas.</p>
     </div>
 
-    <div class="flex-1 bg-white/5 p-6 rounded-2xl border border-gray-800 hover:border-purple-500 transition">
+    <div class="bg-black p-6 rounded-lg shadow-lg shadow-violet-700/50 w-full max-w-sm mx-auto transform transition-transform duration-300 hover:-translate-y-4 hover:shadow-2xl btn-metal">
       <div class="text-purple-500 text-2xl font-bold mb-2">03</div>
       <h3 class="text-xl font-semibold mb-2">Lanzamiento</h3>
       <p class="text-gray-400 text-sm">Publicamos tu web optimizada y lista para generar ventas.</p>
@@ -253,7 +258,7 @@
   <div class="absolute -top-16 -left-16 w-96 h-96 bg-purple-500/20 blur-3xl rounded-full -z-10"></div>
 
   <h2 class="text-3xl md:text-4xl font-bold mb-6">
-    ¿Listo para <span id="an" class="text-purple-500">impulsar tu negocio?</span>
+    ¿Listo para <span id="animated-span" class="text-purple-500">impulsar tu negocio?</span>
   </h2>
   <p class="text-gray-400 mb-12 max-w-2xl mx-auto">
     Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas.

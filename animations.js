@@ -12,3 +12,9 @@ gsap.to("#animated-span", {
       yoyo: true,
       ease: "power1.inOut"
     });
+
+gsap.from("#animated-span", {opacity: 0, scale: 0.5, duration: 1, ease: "back.out(1.7)"});
+
+gsap.from("section h1", {y: 50, opacity: 0, duration: 1, ease: "power3.out"});
+gsap.from("section p", {y: 30, opacity: 0, duration: 1, delay: 0.3, ease: "power3.out"});
+gsap.from("section img", {y: 80, opacity: 0, duration: 1, delay: 1, ease: "elastic.out(1, 0.5)"});
